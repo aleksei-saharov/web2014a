@@ -6,6 +6,9 @@ default: &default
   host: localhost
 
 development:
+  database: __DB__
+  username: __USER__
+  password: __PASSWORD__  
   <<: *default
 
 test:
