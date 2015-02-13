@@ -41,5 +41,5 @@ gem 'spring',        group: :development
 gem 'execjs'
 gem 'therubyracer' 
 gem 'mysql2'
-gem 'less-rails'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'bootstrap-sass'
+gem 'bootstrap-sass-extras'
