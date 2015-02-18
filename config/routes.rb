@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  get 'profile/index'
+  get 'profile/checkAnswer'
+
+  get 'profile/checkTheOwn'
+
+  get 'profile/outButton'
+
+  get 'profile/comeButton'
+
+  get 'profile/logOut'
+
+  get 'profile/checkPartner'
+
+  get 'profile/offer'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
