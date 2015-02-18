@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'company/index'
+
+  get 'company/create'
+
+  get 'company/destroy'
+
+  get 'company/update'
+
   get 'profile/index'
   get 'profile/checkAnswer'
 
