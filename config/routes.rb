@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'schedule_your_department/index'
+
+  get 'schedule_your_department/edit'
+
+  get 'schedule_your_department/update'
+
   get 'company/index'
 
   get 'company/create'
