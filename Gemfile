@@ -43,3 +43,6 @@ gem 'therubyracer'
 gem 'mysql2'
 gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
+
+#registration gem
+gem 'devise'

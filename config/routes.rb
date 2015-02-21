@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'schedule_your_department/index'
 
   get 'schedule_your_department/edit'
