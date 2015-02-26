@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'company/update'
 
   get 'profile/index'
+
   get 'profile/checkAnswer'
 
   get 'profile/checkTheOwn'

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userId: 1
+  day: 2015-02-26 16:38:31
+  arrival: 2015-02-26 16:38:31
+  departure: 2015-02-26 16:38:31
+  out: 2015-02-26 16:38:31
+  toggleTime: MyString
+
+two:
+  userId: 1
+  day: 2015-02-26 16:38:31
+  arrival: 2015-02-26 16:38:31
+  departure: 2015-02-26 16:38:31
+  out: 2015-02-26 16:38:31
+  toggleTime: MyString
