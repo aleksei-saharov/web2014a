@@ -10,9 +10,10 @@ Rails.application.routes.draw do
 
   get 'company/create'
 
-  get 'company/destroy'
+  get 'company/:id/destroy'=> 'company#destroy'
 
-  get 'company/update'
+  get 'company/:id/update' => 'company#update'
+  post 'company/:id/update' => 'company#update'
 
   get 'profile/index'
 

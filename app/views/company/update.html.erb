@@ -1,2 +1,16 @@
 <h1>Company#update</h1>
-<p>Find me in app/views/company/update.html.erb</p>
+<%= form_for :company do |f| %>
+  <p>
+    <%= f.label :companyName %><br>
+    <%= f.text_field :companyName %>
+  </p>
+ 
+  <p>
+    <%= f.label :createdBy %><br>
+    <%= f.text_field :createdBy %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
