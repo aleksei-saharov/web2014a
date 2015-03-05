@@ -1,8 +1,17 @@
 class ProfileController < ApplicationController
   def index
-    
+
   end
+
+
+  def new
+    @profile=Profile.new(profile_params)
+    @profile.save
+    redirect_to profile_index_path
+  end
+
   def offer
+
   end
 
   def checkAnswer
@@ -21,5 +30,10 @@ class ProfileController < ApplicationController
   end
 
   def checkPartner
+  end
+
+  private
+  def profile_params
+    params.require(:profile).permit(:type, :description)
   end
 end

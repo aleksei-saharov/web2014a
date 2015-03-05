@@ -1,2 +1,15 @@
 <h1>Profile#offer</h1>
-<p>Find me in app/views/profile/offer.html.erb</p>
+<%= form_for :profile , url: profile_new_path do |f| %>
+    <p>
+      <%= f.label :type%>
+      <%= select_tag(:type,options_for_select(['vacation', 'compensatory holiday'])) %>
+
+    </p>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

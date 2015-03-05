@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226133831) do
+ActiveRecord::Schema.define(version: 20150305195548) do
 
   create_table "companies", force: true do |t|
     t.string   "companyName"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20150226133831) do
     t.datetime "departure"
     t.datetime "out"
     t.string   "toggleTime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.string   "type"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

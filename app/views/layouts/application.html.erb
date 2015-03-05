@@ -99,6 +99,10 @@
 							<li>
 								<%= link_to "Sign in", new_user_session_path %>
 							</li>
+                             <li>
+                                <%= link_to "Profile", profile_index_path %>
+                               <!--link_to_if for named routes-->
+                             </li>
 							<li>
 								<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 							</li>

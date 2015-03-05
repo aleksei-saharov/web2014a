@@ -35,7 +35,11 @@ Rails.application.routes.draw do
 
   get 'profile/checkPartner'
 
+  post 'profile/new'=>'profile#new'
+
   get 'profile/offer'
+
+  post 'profile/offer' => 'profile#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
