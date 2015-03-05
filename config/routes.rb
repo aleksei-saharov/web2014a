@@ -6,15 +6,21 @@ Rails.application.routes.draw do
 
   get 'schedule_your_department/update'
 
-  get 'company/index'
-
-  get 'company/create'
+  get 'company/index' => 'company#index'
+  
+  get 'company/create' =>'company#create'
+  post 'company/create' =>'company#create'
+  
+  post 'company/new'=>'company#new'
 
   get 'company/:id/destroy'=> 'company#destroy'
+  post 'company/:id/destroy'=> 'company#destroy'
 
-  get 'company/:id/update' => 'company#update'
-  post 'company/:id/update' => 'company#update'
-
+  get 'company/:id/edit' => 'company#edit'
+  patch 'company/:id/edit' => 'company#update'
+  
+  
+  
   get 'profile/index'
 
   get 'profile/checkAnswer'

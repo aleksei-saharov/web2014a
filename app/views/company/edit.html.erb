@@ -1,5 +1,5 @@
 <h1>Company#update</h1>
-<%= form_for :company do |f| %>
+<%= form_for :company, method: :patch do |f| %>
   <p>
     <%= f.label :companyName %><br>
     <%= f.text_field :companyName %>
