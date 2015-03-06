@@ -45,6 +45,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    debase (0.1.2)
+      debase-ruby_core_source
+    debase-ruby_core_source (0.7.7)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -137,6 +140,7 @@ DEPENDENCIES
   bootstrap-sass
   bootstrap-sass-extras
   coffee-rails (~> 4.0.0)
+  debase
   devise
   execjs
   jbuilder (~> 2.0)

@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
+  cause: MyString
   description: MyString
 
 two:
-  type: 
+  cause: MyString
   description: MyString

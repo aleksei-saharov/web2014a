@@ -44,5 +44,7 @@ gem 'mysql2'
 gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
 
+gem 'debase'
+
 #registration gem
 gem 'devise'

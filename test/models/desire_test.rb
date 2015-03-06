@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ProfileTest < ActiveSupport::TestCase
+class DesireTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

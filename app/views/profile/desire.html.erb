@@ -1,0 +1,15 @@
+<h1>Profile#desire</h1>
+<%= form_for :desire , url: profile_new_path do |f| %>
+    <p>
+      <%= f.label :cause%>
+      <%= f.select :cause, ['paid vacation', 'unpaid vacation'], {}, { :class => 'desire' } %>
+
+    </p>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

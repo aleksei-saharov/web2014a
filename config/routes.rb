@@ -37,9 +37,9 @@ Rails.application.routes.draw do
 
   post 'profile/new'=>'profile#new'
 
-  get 'profile/offer'
+  get 'profile/desire' => 'profile#desire'
 
-  post 'profile/offer' => 'profile#index'
+  post 'profile/desire'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
