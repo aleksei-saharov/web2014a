@@ -48,3 +48,4 @@ gem 'debase'
 
 #registration gem
 gem 'devise'
+gem 'bootstrap_form'
