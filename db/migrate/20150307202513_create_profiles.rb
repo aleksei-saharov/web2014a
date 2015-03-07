@@ -1,6 +1,6 @@
-class CreateDesires < ActiveRecord::Migration
+class CreateProfiles < ActiveRecord::Migration
   def change
-    create_table :desires do |t|
+    create_table :profiles do |t|
       t.string :cause
       t.string :description
 

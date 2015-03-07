@@ -5,8 +5,8 @@ class ProfileController < ApplicationController
 
 
   def new
-    @desire=Desire.new(profile_params)
-    @desire.save
+    @profile=Profile.new(profile_params)
+    @profile.save
     redirect_to profile_index_path
   end
 
@@ -34,6 +34,6 @@ class ProfileController < ApplicationController
 
   private
   def profile_params
-    params.require(:desire).permit(:cause, :description)
+    params.require(:profile).permit(:cause, :description)
   end
 end
