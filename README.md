@@ -15,6 +15,10 @@ https://github.com/twbs/bootstrap-sass/#a-ruby-on-rails
 !!!UPD#3
 создал контроллер schedule_your_department,экшны,вьюхи для него (они пока пустые), прописал роуты, выкинул на главную страницу
 
+рекомендуемое оформление кода: https://github.com/arbox/ruby-style-guide/blob/master/README-ruRU.md
+123
+
+
 TEST
 ====
 
