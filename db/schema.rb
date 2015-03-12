@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309145123) do
+ActiveRecord::Schema.define(version: 20150307202513) do
 
   create_table "companies", force: true do |t|
     t.string   "companyName"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20150309145123) do
   create_table "departments", force: true do |t|
     t.string   "departmentName"
     t.string   "headOfDepartment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "desires", force: true do |t|
+    t.string   "cause"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,32 +48,6 @@ ActiveRecord::Schema.define(version: 20150309145123) do
   create_table "profiles", force: true do |t|
     t.string   "cause"
     t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "schedule_day_officials", force: true do |t|
-    t.datetime "arrival"
-    t.datetime "departure"
-    t.datetime "lunch_start"
-    t.datetime "lunch_end"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "schedule_templates", force: true do |t|
-    t.string   "name"
-    t.datetime "arrival"
-    t.datetime "departure"
-    t.boolean  "mon"
-    t.boolean  "tue"
-    t.boolean  "wed"
-    t.boolean  "thu"
-    t.boolean  "fri"
-    t.boolean  "sat"
-    t.boolean  "sun"
-    t.datetime "lunch_start"
-    t.datetime "lunch_end"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

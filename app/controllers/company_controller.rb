@@ -3,6 +3,9 @@ class CompanyController < ApplicationController
      @companies=Company.all
     
   end
+  def show
+    @company=Company.find(params[:id])
+  end
 
   def create
      

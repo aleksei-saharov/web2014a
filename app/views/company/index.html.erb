@@ -10,7 +10,16 @@
     <tr>
       <td><%= company.companyName %></td>
       <td><%= company.createdBy %></td>
+      <td><%= link_to 'Update', :controller=> 'company' , :action => 'edit', :id=>company.id %></td>
+      <td><%= link_to 'Delete', :controller=> 'company' , :action => 'destroy', :id=>company.id %></td>
      
     </tr>
   <% end %>
 </table>
+
+<div>
+	<%=link_to 'New company', company_create_path %>
+</div>
+<div>
+	<%=link_to 'Back to main', "/"%>
+</div>
