@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arrival: 2015-03-12 20:55:20
+  departure: 2015-03-12 20:55:20
+  lunch_start: 2015-03-12 20:55:20
+  lunch_end: 2015-03-12 20:55:20
+
+two:
+  arrival: 2015-03-12 20:55:20
+  departure: 2015-03-12 20:55:20
+  lunch_start: 2015-03-12 20:55:20
+  lunch_end: 2015-03-12 20:55:20

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  arrival: 2015-03-12 20:57:39
+  departure: 2015-03-12 20:57:39
+  mon: false
+  tue: false
+  wed: false
+  thu: false
+  fri: false
+  sat: false
+  sun: false
+  lunch_start: 2015-03-12 20:57:39
+  lunch_end: 2015-03-12 20:57:39
+
+two:
+  name: MyString
+  arrival: 2015-03-12 20:57:39
+  departure: 2015-03-12 20:57:39
+  mon: false
+  tue: false
+  wed: false
+  thu: false
+  fri: false
+  sat: false
+  sun: false
+  lunch_start: 2015-03-12 20:57:39
+  lunch_end: 2015-03-12 20:57:39
