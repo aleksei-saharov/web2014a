@@ -24,6 +24,7 @@ class ProfileController < ApplicationController
   end
 
   def comeButton
+
   end
 
   def logOut
