@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320211400) do
+ActiveRecord::Schema.define(version: 20150321031208) do
 
   create_table "companies", force: true do |t|
     t.string   "companyName"
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 20150320211400) do
     t.datetime "updated_at"
   end
 
+  create_table "personals", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "profiles", force: true do |t|
     t.string   "cause"
     t.string   "description"
@@ -52,19 +57,93 @@ ActiveRecord::Schema.define(version: 20150320211400) do
     t.datetime "updated_at"
   end
 
-  create_table "schedule_day_officials", force: true do |t|
-    t.datetime "arrival"
-    t.datetime "departure"
-    t.datetime "lunch_start"
-    t.datetime "lunch_end"
+  create_table "role_names", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "schedule_templates", force: true do |t|
+  create_table "roles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_day_officials", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_month_officials", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_officials", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_template_day_periods", force: true do |t|
+    t.integer  "number_of_working_days"
+    t.integer  "number_of_days_off"
+    t.date     "repeat_since"
+    t.date     "repeat_until"
     t.string   "name"
-    t.datetime "arrival"
-    t.datetime "departure"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_template_month_period_week_orientations", force: true do |t|
+    t.integer  "number_of_working_months"
+    t.integer  "number_of_months_off"
+    t.date     "repeat_since"
+    t.date     "repeat_until"
+    t.integer  "week_number"
+    t.boolean  "full_week"
+    t.integer  "day_of_week_start"
+    t.integer  "day_of_week_end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_template_month_periods", force: true do |t|
+    t.integer  "number_of_working_months"
+    t.integer  "number_of_months_off"
+    t.date     "repeat_since"
+    t.date     "repeat_until"
+    t.integer  "day_of_month_start"
+    t.integer  "day_of_month_end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_template_time_breaks", force: true do |t|
+    t.time     "start"
+    t.time     "end"
+    t.boolean  "notice_of_arrival"
+    t.boolean  "notice_of_departure"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_template_time_in_outs", force: true do |t|
+    t.time     "arrival"
+    t.time     "departure"
+    t.boolean  "notice_of_arrival"
+    t.boolean  "notice_of_departure"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_template_week_periods", force: true do |t|
+    t.integer  "number_of_working_weeks"
+    t.integer  "number_of_weeks_off"
+    t.date     "repeat_since"
+    t.date     "repeat_until"
+    t.string   "name"
     t.boolean  "mon"
     t.boolean  "tue"
     t.boolean  "wed"
@@ -72,8 +151,21 @@ ActiveRecord::Schema.define(version: 20150320211400) do
     t.boolean  "fri"
     t.boolean  "sat"
     t.boolean  "sun"
-    t.datetime "lunch_start"
-    t.datetime "lunch_end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_templates_personals", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_week_officials", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "schedule_year_officials", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
