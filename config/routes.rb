@@ -33,6 +33,8 @@ Rails.application.routes.draw do
 
   get 'profile/logOut'
 
+  post 'profile/logIn' => 'profile#logIn'
+
   get 'profile/checkPartner'
 
   post 'profile/new'=>'profile#new'

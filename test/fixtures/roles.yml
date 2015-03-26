@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  roleName: MyString
+  comeInTime: 2015-03-26 19:46:30
+  comeOutTime: 2015-03-26 19:46:30
+  lunchStart: 2015-03-26 19:46:30
+  lunchEnd: 2015-03-26 19:46:30
+
+two:
+  email: MyString
+  roleName: MyString
+  comeInTime: 2015-03-26 19:46:30
+  comeOutTime: 2015-03-26 19:46:30
+  lunchStart: 2015-03-26 19:46:30
+  lunchEnd: 2015-03-26 19:46:30

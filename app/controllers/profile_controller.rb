@@ -27,7 +27,14 @@ class ProfileController < ApplicationController
 
   end
 
+  def logIn
+    @cookie=Cookie.new(cookie_params)
+    @cookie.hash=SecureRandom.hex(@cookie.id)
+    redirect_to profile_index_path
+  end
+
   def logOut
+
   end
 
   def checkPartner
@@ -36,5 +43,8 @@ class ProfileController < ApplicationController
   private
   def profile_params
     params.require(:profile).permit(:cause, :description)
+  end
+  def cookie_params
+    params.require(:cookie).permit(:email)
   end
 end

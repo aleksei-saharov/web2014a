@@ -93,6 +93,8 @@ function pause() {
 		<!-- Size should be 32 x 32 pixels -->
 		<%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 		<%= javascript_include_tag "application" %>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	</head>
 	<body>
 
@@ -154,7 +156,7 @@ function pause() {
 							</li>
 							
 							<li>
-								<%= link_to "Sign in", new_user_session_path %>
+								<%= link_to "Sign in", new_user_session_path%>
 							</li>
                              <li>
                                 <%= link_to "Profile", profile_index_path %>

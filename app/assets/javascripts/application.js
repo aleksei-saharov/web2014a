@@ -15,3 +15,11 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+/*document.addEventListener("DOMContentLoaded", function(event) {
+    $('#my-link').click(function (event) {
+        alert('Hooray!');
+        event.preventDefault(); // Prevent link from following its href
+    });
+});
+*/
