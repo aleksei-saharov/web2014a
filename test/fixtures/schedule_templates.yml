@@ -1,29 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  arrival: 2015-03-12 20:57:39
-  departure: 2015-03-12 20:57:39
-  mon: false
-  tue: false
-  wed: false
-  thu: false
-  fri: false
-  sat: false
-  sun: false
-  lunch_start: 2015-03-12 20:57:39
-  lunch_end: 2015-03-12 20:57:39
-
-two:
-  name: MyString
-  arrival: 2015-03-12 20:57:39
-  departure: 2015-03-12 20:57:39
-  mon: false
-  tue: false
-  wed: false
-  thu: false
-  fri: false
-  sat: false
-  sun: false
-  lunch_start: 2015-03-12 20:57:39
-  lunch_end: 2015-03-12 20:57:39
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

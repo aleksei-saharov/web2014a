@@ -1,8 +1,8 @@
 class CreateCompanies < ActiveRecord::Migration
   def change
     create_table :companies do |t|
-      t.string :companyName
-      t.string :createdBy
+      t.string :company_name
+      t.string :created_by
 
       t.timestamps
     end
