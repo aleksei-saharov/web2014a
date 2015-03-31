@@ -4,5 +4,8 @@ class ApplicationController < ActionController::Base
   layout "application"
   protect_from_forgery with: :exception
   def index
-  end  
+  end
+  def after_sign_in_path_for(resource)
+    company_index_path
+  end
 end

@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20150327200144) do
 
   create_table "companies", force: true do |t|
-    t.string   "company_name"
-    t.string   "created_by"
+    t.string   "companyName"
+    t.string   "createdBy"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,20 +28,19 @@ ActiveRecord::Schema.define(version: 20150327200144) do
   end
 
   create_table "departments", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "head_of_department_id"
+    t.string   "departmentName"
+    t.string   "headOfDepartment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "notes", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "userId"
     t.datetime "day"
     t.datetime "arrival"
     t.datetime "departure"
     t.datetime "out"
-    t.string   "toggle_time"
+    t.string   "toggleTime"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -54,21 +53,21 @@ ActiveRecord::Schema.define(version: 20150327200144) do
   end
 
   create_table "roles", force: true do |t|
-    t.integer  "current_user_id"
-    t.integer  "head_role_id"
-    t.integer  "department_id"
-    t.string   "role_name"
-    t.text     "role_description"
+    t.string   "email"
+    t.string   "roleName"
+    t.datetime "comeInTime"
+    t.datetime "comeOutTime"
+    t.datetime "lunchStart"
+    t.datetime "lunchEnd"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "schedule_day_officials", force: true do |t|
-    t.date     "day"
-    t.time     "arrival"
-    t.time     "departure"
-    t.time     "lunch_start"
-    t.time     "lunch_end"
+    t.datetime "arrival"
+    t.datetime "departure"
+    t.datetime "lunch_start"
+    t.datetime "lunch_end"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
