@@ -27,7 +27,8 @@ class ProfileController < ApplicationController
   end
 
   def comeButton
-    @timing=ScheduleDayOfficials.new(come_params)
+    @timing=ScheduleDayOfficials.new
+    @timing.arrival=Time.now
     @timing.save
   end
 
