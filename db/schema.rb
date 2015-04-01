@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327200144) do
+ActiveRecord::Schema.define(version: 20150328091010) do
 
   create_table "companies", force: true do |t|
     t.string   "company_name"
@@ -77,14 +77,19 @@ ActiveRecord::Schema.define(version: 20150327200144) do
     t.date     "start_working_since_day"
     t.integer  "number_of_working_days"
     t.integer  "number_of_days_off"
-    t.integer  "boolean_week"
+    t.integer  "boolean_week_mask"
+    t.integer  "number_of_time_intervals_per_day_mask"
     t.boolean  "working_holidays"
-    t.time     "arrival"
-    t.time     "departure"
-    t.boolean  "need_notification"
     t.boolean  "is_confirmed"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "time_intervals", force: true do |t|
+    t.integer "used_in_day_mask"
+    t.time    "arrival"
+    t.time    "departure"
+    t.boolean "need_notification"
   end
 
   create_table "users", force: true do |t|
