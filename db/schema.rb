@@ -20,13 +20,6 @@ ActiveRecord::Schema.define(version: 20150328091010) do
     t.datetime "updated_at"
   end
 
-  create_table "cookies", force: true do |t|
-    t.text     "email"
-    t.text     "hash"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "departments", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -89,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150328091010) do
     t.integer "used_in_day_mask"
     t.time    "arrival"
     t.time    "departure"
+    t.integer "user_id"
     t.boolean "need_notification"
   end
 
