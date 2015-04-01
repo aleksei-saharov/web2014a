@@ -29,6 +29,7 @@ class ProfileController < ApplicationController
   def comeButton
     @timing=ScheduleDayOfficials.new
     @timing.arrival=Time.now
+    @timing.id=User.where('email'=> current_user.email)[0]['id']
     @timing.save
   end
 
