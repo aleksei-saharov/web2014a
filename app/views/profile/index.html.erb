@@ -1,9 +1,9 @@
 <h1>Profile:</h1>
     <% if $flag %>
-        <%= link_to 'profile#comeButton', profile_comeButton_path%>
+        <button type="button" class="btn btn-success"><%= link_to 'Come', profile_comeButton_path%></button>
     <% else %>
 
-        <%= link_to 'profile#outButton', profile_outButton_path%>
+        <button type="button" class="btn btn-danger"><%= link_to 'Out', profile_outButton_path%></button>
     <% end%>
 
 

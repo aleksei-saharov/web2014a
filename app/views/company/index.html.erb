@@ -8,8 +8,8 @@
  
   <% @companies.each do |company| %>
     <tr>
-      <td><%= company.companyName %></td>
-      <td><%= company.createdBy %></td>
+      <td><%= company.company_name %></td>
+      <td><%= company.created_by %></td>
       <td><%= link_to 'Update', :controller=> 'company' , :action => 'edit', :id=>company.id %></td>
       <td><%= link_to 'Delete', :controller=> 'company' , :action => 'destroy', :id=>company.id %></td>
      
