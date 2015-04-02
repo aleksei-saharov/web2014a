@@ -1,14 +1,11 @@
 <h1>Profile:</h1>
-    <%# if @flag%>
+    <% if $flag %>
         <%= link_to 'profile#comeButton', profile_comeButton_path%>
-    <%# else %>
-<br/>
+    <% else %>
+
         <%= link_to 'profile#outButton', profile_outButton_path%>
-    <%# end%>
-<br/>
-<pre>
-  <%= @flag.inspect %>
-</pre>
+    <% end%>
+
 
 
 

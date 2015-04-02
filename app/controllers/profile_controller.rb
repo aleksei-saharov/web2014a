@@ -1,6 +1,8 @@
 class ProfileController < ApplicationController
   before_action :authenticate_user!
 
+  $flag=true
+
   def index
     #if @flag.nil?
         #@flag=true
@@ -27,12 +29,12 @@ class ProfileController < ApplicationController
   end
 
   def outButton
-
+    $flag=true;
     @a=User.where('email'=> current_user.email)[0]['id']
     @user=TimeInterval.find_by_user_id(@a)
     @user.departure=Time.now
     @user.save
-
+    redirect_to profile_index_path
     #redirect_to destroy_user_session_path
     #TimeInterval.create(:departure => Time.now, :user_id => @a)
     #Users.new(:username => "Hello", :role => "Admin"
@@ -43,12 +45,12 @@ class ProfileController < ApplicationController
   end
 
   def comeButton
-    #@flag=false
+    $flag=false
     @timing=TimeInterval.new
     @timing.arrival=Time.now
     @timing.user_id=User.where('email'=> current_user.email)[0]['id']
     @timing.save
-    #redirect_to profile_index_path
+    redirect_to profile_index_path
   end
 
   def logIn
