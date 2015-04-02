@@ -4,6 +4,7 @@ class ProfileController < ApplicationController
   $flag=true
 
   def index
+    #$user_ids=User.where('email'=> current_user.email)[]['id']
     #if @flag.nil?
         #@flag=true
     #else
@@ -29,12 +30,18 @@ class ProfileController < ApplicationController
   end
 
   def outButton
-    $flag=true;
+    $flag=true
     @a=User.where('email'=> current_user.email)[0]['id']
-    @user=TimeInterval.find_by_user_id(@a)
+    @array_of_id=TimeInterval.where(user_id: @a).pluck(:id)
+    # SELECT id FROM time_intervals WHERE user_id = @a
+    @max_id=@array_of_id.compact.max
+    @user=TimeInterval.find_by_id(@max_id)
     @user.departure=Time.now
     @user.save
+
     redirect_to profile_index_path
+
+    #@user=TimeInterval.find_by_sql("SELECT max(id) FROM time_intervals WHERE user_id=#{@a}")
     #redirect_to destroy_user_session_path
     #TimeInterval.create(:departure => Time.now, :user_id => @a)
     #Users.new(:username => "Hello", :role => "Admin"
@@ -49,7 +56,11 @@ class ProfileController < ApplicationController
     @timing=TimeInterval.new
     @timing.arrival=Time.now
     @timing.user_id=User.where('email'=> current_user.email)[0]['id']
+
+
+
     @timing.save
+    #$max_id=TimeInterval.maximum("id")
     redirect_to profile_index_path
   end
 
