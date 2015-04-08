@@ -43,6 +43,7 @@ Rails.application.routes.draw do
 
   post 'profile/desire'
 
+  get 'profile/goDinner' => 'profile#goDinner'
 
   #get '/users/sign_out' => 'devise/sessions#destroy'
 

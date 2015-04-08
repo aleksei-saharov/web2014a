@@ -29,6 +29,14 @@ class ProfileController < ApplicationController
   def checkTheOwn
   end
 
+  def goDinner
+
+  end
+
+  def comeDinner
+
+  end
+
   def outButton
     $flag=true
     @a=User.where('email'=> current_user.email)[0]['id']

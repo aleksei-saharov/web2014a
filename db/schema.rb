@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328091010) do
+ActiveRecord::Schema.define(version: 20150403235401) do
 
   create_table "companies", force: true do |t|
     t.string   "company_name"
@@ -19,6 +19,24 @@ ActiveRecord::Schema.define(version: 20150328091010) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "days_schedules", force: true do |t|
+    t.integer  "role_id",                  null: false
+    t.integer  "user_id",                  null: false
+    t.integer  "working_days_calendar_id", null: false
+    t.time     "schedule_time_start",      null: false
+    t.time     "schedule_time_end",        null: false
+    t.time     "real_time_start"
+    t.time     "real_time_end"
+    t.time     "lunch_time_start"
+    t.time     "lunch_time_end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "days_schedules", ["role_id"], name: "index_days_schedules_on_role_id", using: :btree
+  add_index "days_schedules", ["user_id"], name: "index_days_schedules_on_user_id", using: :btree
+  add_index "days_schedules", ["working_days_calendar_id"], name: "index_days_schedules_on_working_days_calendar_id", using: :btree
 
   create_table "departments", force: true do |t|
     t.string   "name"
@@ -103,5 +121,12 @@ ActiveRecord::Schema.define(version: 20150328091010) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "working_days_calendars", force: true do |t|
+    t.date     "date",             null: false
+    t.boolean  "working_day_flag", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
