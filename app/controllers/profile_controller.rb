@@ -34,7 +34,7 @@ class ProfileController < ApplicationController
   end
 
   def comeDinner
-
+    redirect_to profile_index_path
   end
 
   def outButton
