@@ -1,4 +1,4 @@
-<h1>Profile:</h1>
+<h1>Hello, <%=current_user.email%> </h1> 
     <% if $flag %>
         <%= link_to raw("<span><button type='button' class='btn btn-primary'>Come</button></span>"), profile_comeButton_path%>
     <% else %>
@@ -6,6 +6,22 @@
         <%= link_to raw("<span><button type='button' class='btn btn-danger'>Out</button></span>"), profile_outButton_path%></button>
         <%= link_to raw("<span><button type='button' class='btn btn-default'>Dinner</button></span>"), profile_goDinner_path%></button>
     <% end%>
+    <div>
+    	<table>
+  <tr>
+    <th>Coming Time &nbsp; &nbsp; &nbsp;</th>
+    <th>Departuring Time&nbsp; &nbsp; &nbsp;</th>
+    <th>coming - departuring&nbsp; &nbsp; &nbsp;</th>
+  </tr>
+  <% @TimeIntervals.each do |timeinterval| %>
+     <tr>
+      <td><%= timeinterval.arrival %>&nbsp;&nbsp;</td>
+      <td><%= timeinterval.departure %>&nbsp;&nbsp;</td>
+      <td><%= @timediff = timeinterval.departure - timeinterval.arrival %></td>
+     </tr>
+  <% end %> 
+</table>
+    </div>
 
 
 
