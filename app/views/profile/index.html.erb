@@ -15,8 +15,14 @@
   </tr>
   <% @TimeIntervals.each do |timeinterval| %>
      <tr>
-      <td><%= timeinterval.arrival %>&nbsp;&nbsp;</td>
-      <td><%= timeinterval.departure %>&nbsp;&nbsp;</td>
+      <td><%= timeinterval.arrival.strftime("%H:%M:%S") %>&nbsp;&nbsp;</td>
+      <%if timeinterval.departure !=nil%>
+      <td><%= timeinterval.departure.strftime("%H:%M:%S")%>&nbsp;&nbsp;</td>
+      <%end%>
+      <%if timeinterval.departure !=nil && timeinterval.arrival !=nil %>
+      <td><%= timeinterval.departure - timeinterval.arrival%>&nbsp;&nbsp;</td>
+      <%end%>
+      
       
      </tr>
   <% end %> 
