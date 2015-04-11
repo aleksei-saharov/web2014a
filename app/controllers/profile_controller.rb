@@ -10,6 +10,9 @@ class ProfileController < ApplicationController
     #else
       #@flag=false
     #end
+    @TimeIntervals=TimeInterval.all
+    
+    
   end
 
 
@@ -43,9 +46,9 @@ class ProfileController < ApplicationController
     @array_of_id=TimeInterval.where(user_id: @a).pluck(:id)
     # SELECT id FROM time_intervals WHERE user_id = @a
     @max_id=@array_of_id.compact.max
-    @user=TimeInterval.find_by_id(@max_id)
-    @user.departure=Time.now
-    @user.save
+    @TimeInterval=TimeInterval.find_by_id(@max_id)
+    @TimeInterval.departure=Time.now
+    @TimeInterval.save
 
     redirect_to profile_index_path
 
@@ -61,13 +64,13 @@ class ProfileController < ApplicationController
 
   def comeButton
     $flag=false
-    @timing=TimeInterval.new
-    @timing.arrival=Time.now
-    @timing.user_id=User.where('email'=> current_user.email)[0]['id']
+    @TimeInterval=TimeInterval.new
+    @TimeInterval.arrival=Time.now
+    @TimeInterval.user_id=User.where('email'=> current_user.email)[0]['id']
 
 
 
-    @timing.save
+    @TimeInterval.save
     #$max_id=TimeInterval.maximum("id")
     redirect_to profile_index_path
   end
