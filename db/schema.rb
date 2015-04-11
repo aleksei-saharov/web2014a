@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150403235401) do
+ActiveRecord::Schema.define(version: 20150411070850) do
+
+  create_table "abstract_time_intervals", force: true do |t|
+    t.time    "arrival"
+    t.time    "departure"
+    t.boolean "need_notification"
+  end
 
   create_table "companies", force: true do |t|
     t.string   "company_name"
@@ -96,12 +102,12 @@ ActiveRecord::Schema.define(version: 20150403235401) do
     t.datetime "updated_at"
   end
 
-  create_table "time_intervals", force: true do |t|
+  create_table "time_interval_for_templates", force: true do |t|
     t.integer "used_in_day_mask"
-    t.time    "arrival"
-    t.time    "departure"
+  end
+
+  create_table "time_intervals", force: true do |t|
     t.integer "user_id"
-    t.boolean "need_notification"
   end
 
   create_table "users", force: true do |t|
