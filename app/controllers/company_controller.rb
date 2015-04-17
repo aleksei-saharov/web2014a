@@ -35,6 +35,9 @@ class CompanyController < ApplicationController
       redirect_to company_index_path
     end
   end
+  def create_roles
+    @role=Role.new(params.require(:role).permit(:company_name,:created_by,:role_name))
+  end
   private
   def company_params
     params.require(:company).permit(:company_name, :created_by)

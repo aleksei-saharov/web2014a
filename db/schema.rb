@@ -107,7 +107,11 @@ ActiveRecord::Schema.define(version: 20150411070850) do
   end
 
   create_table "time_intervals", force: true do |t|
+    t.integer "used_in_day_mask"
+    t.time    "arrival"
+    t.time    "departure"
     t.integer "user_id"
+    t.boolean "need_notification"
   end
 
   create_table "users", force: true do |t|
