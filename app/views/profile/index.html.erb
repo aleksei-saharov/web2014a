@@ -1,4 +1,6 @@
-<h1>Hello, <%=current_user.email%> </h1> 
+<h1>Hello, <%=current_user.email%> </h1>
+<%= $dinner_flag%>
+
     <% if $flag %>
         <%= link_to raw("<span><button type='button' class='btn btn-primary'>Come</button></span>"), profile_comeButton_path%>
     <% else %>

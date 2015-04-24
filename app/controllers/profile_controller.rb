@@ -1,8 +1,8 @@
 class ProfileController < ApplicationController
   before_action :authenticate_user!
-
+  before_action :redirection
   $flag=true
-
+  $dinner_flag=false
   def index
     #$user_ids=User.where('email'=> current_user.email)[]['id']
     #if @flag.nil?
@@ -22,6 +22,14 @@ class ProfileController < ApplicationController
     redirect_to profile_index_path
   end
 
+  def redirection
+        if $dinner_flag
+          $dinner_flag=false
+          redirect_to profile_goDinner_path
+
+        end
+
+  end
   def desire
 
   end
